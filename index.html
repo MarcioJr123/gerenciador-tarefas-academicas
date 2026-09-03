@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas Acadêmicas</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Gerenciador de Tarefas Acadêmicas</h1>
+        <p>Quadro de tarefas dos projetos acadêmicos.</p>
+    </header>
+
+    <main>
+
+        <section aria-labelledby="titulo-busca">
+            <h2 id="titulo-busca">Busca e filtros</h2>
+
+            <form>
+                <div>
+                    <label for="busca">Buscar tarefa por título:</label>
+                    <input type="search" id="busca" name="busca">
+                </div>
+
+                <fieldset>
+                    <legend>Filtrar por status</legend>
+
+                    <div>
+                        <input type="radio" id="status-todos" name="status" value="todos" checked>
+                        <label for="status-todos">Todos</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="status-fazer" name="status" value="a-fazer">
+                        <label for="status-fazer">A fazer</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="status-andamento" name="status" value="em-andamento">
+                        <label for="status-andamento">Em andamento</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="status-revisao" name="status" value="em-revisao">
+                        <label for="status-revisao">Em revisão</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="status-concluida" name="status" value="concluida">
+                        <label for="status-concluida">Concluída</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Filtrar por prioridade</legend>
+
+                    <div>
+                        <input type="radio" id="prioridade-todas" name="prioridade" value="todas" checked>
+                        <label for="prioridade-todas">Todas</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="prioridade-baixa" name="prioridade" value="baixa">
+                        <label for="prioridade-baixa">Baixa</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="prioridade-media" name="prioridade" value="media">
+                        <label for="prioridade-media">Média</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="prioridade-alta" name="prioridade" value="alta">
+                        <label for="prioridade-alta">Alta</label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section aria-labelledby="titulo-quadro">
+            <h2 id="titulo-quadro">Quadro de tarefas</h2>
+
+            <section aria-labelledby="titulo-a-fazer">
+                <h2 id="titulo-a-fazer">A fazer</h2>
+
+                <ul>
+                    <li>
+                        <article>
+                            <h3>Pesquisar referências bibliográficas</h3>
+                            <p><strong>Projeto:</strong> Trabalho de Conclusão de Curso</p>
+                            <p><strong>Responsável:</strong> Ana Silva</p>
+                            <p><strong>Prazo:</strong> 15/08/2026</p>
+                            <p><strong>Prioridade:</strong> Alta</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3>Criar modelo do banco de dados</h3>
+                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
+                            <p><strong>Responsável:</strong> João Santos</p>
+                            <p><strong>Prazo:</strong> 18/08/2026</p>
+                            <p><strong>Prioridade:</strong> Média</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="titulo-andamento">
+                <h2 id="titulo-andamento">Em andamento</h2>
+
+                <ul>
+                    <li>
+                        <article>
+                            <h3>Desenvolver página inicial</h3>
+                            <p><strong>Projeto:</strong> Portal da Biblioteca</p>
+                            <p><strong>Responsável:</strong> Carlos Oliveira</p>
+                            <p><strong>Prazo:</strong> 20/08/2026</p>
+                            <p><strong>Prioridade:</strong> Alta</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3>Implementar cadastro de alunos</h3>
+                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
+                            <p><strong>Responsável:</strong> Maria Souza</p>
+                            <p><strong>Prazo:</strong> 22/08/2026</p>
+                            <p><strong>Prioridade:</strong> Média</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="titulo-revisao">
+                <h2 id="titulo-revisao">Em revisão</h2>
+
+                <ul>
+                    <li>
+                        <article>
+                            <h3>Revisar documentação do projeto</h3>
+                            <p><strong>Projeto:</strong> Engenharia de Software</p>
+                            <p><strong>Responsável:</strong> Lucas Pereira</p>
+                            <p><strong>Prazo:</strong> 25/08/2026</p>
+                            <p><strong>Prioridade:</strong> Baixa</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3>Testar formulário de matrícula</h3>
+                            <p><strong>Projeto:</strong> Sistema Acadêmico</p>
+                            <p><strong>Responsável:</strong> Beatriz Lima</p>
+                            <p><strong>Prazo:</strong> 27/08/2026</p>
+                            <p><strong>Prioridade:</strong> Alta</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="titulo-concluida">
+                <h2 id="titulo-concluida">Concluída</h2>
+
+                <ul>
+                    <li>
+                        <article>
+                            <h3>Definir requisitos do projeto</h3>
+                            <p><strong>Projeto:</strong> Aplicativo de Estudos</p>
+                            <p><strong>Responsável:</strong> Pedro Costa</p>
+                            <p><strong>Prazo:</strong> 05/08/2026</p>
+                            <p><strong>Prioridade:</strong> Média</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <h3>Entregar relatório da disciplina</h3>
+                            <p><strong>Projeto:</strong> Projeto de Banco de Dados</p>
+                            <p><strong>Responsável:</strong> Julia Martins</p>
+                            <p><strong>Prazo:</strong> 08/08/2026</p>
+                            <p><strong>Prioridade:</strong> Baixa</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Márcio Ribeiro</p>
+        <p>Disciplina: Desenvolvimento Front-End</p>
+    </footer>
+
+</body>
+</html>
