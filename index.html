@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Tarefas Acadêmicas</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -15,11 +16,11 @@
 
     <main>
 
-        <section aria-labelledby="titulo-busca">
+        <section class="filtros" aria-labelledby="titulo-busca">
             <h2 id="titulo-busca">Busca e filtros</h2>
 
             <form>
-                <div>
+                <div class="campo-busca">
                     <label for="busca">Buscar tarefa por título:</label>
                     <input type="search" id="busca" name="busca">
                 </div>
@@ -79,10 +80,10 @@
             </form>
         </section>
 
-        <section aria-labelledby="titulo-quadro">
+        <section class="quadro" aria-labelledby="titulo-quadro">
             <h2 id="titulo-quadro">Quadro de tarefas</h2>
 
-            <section aria-labelledby="titulo-a-fazer">
+            <section class="coluna coluna-a-fazer" aria-labelledby="titulo-a-fazer">
                 <h2 id="titulo-a-fazer">A fazer</h2>
 
                 <ul>
@@ -108,7 +109,7 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-andamento">
+            <section class="coluna coluna-andamento" aria-labelledby="titulo-andamento">
                 <h2 id="titulo-andamento">Em andamento</h2>
 
                 <ul>
@@ -134,7 +135,7 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-revisao">
+            <section class="coluna coluna-revisao" aria-labelledby="titulo-revisao">
                 <h2 id="titulo-revisao">Em revisão</h2>
 
                 <ul>
@@ -160,7 +161,7 @@
                 </ul>
             </section>
 
-            <section aria-labelledby="titulo-concluida">
+            <section class="coluna coluna-concluida" aria-labelledby="titulo-concluida">
                 <h2 id="titulo-concluida">Concluída</h2>
 
                 <ul>
