@@ -1,0 +1,76 @@
+{
+    "tarefas": [
+        {
+            "id": "t1",
+            "titulo": "Pesquisar referências bibliográficas",
+            "projeto": "Trabalho de Conclusão de Curso",
+            "responsavel": "Ana Silva",
+            "status": "a-fazer",
+            "prioridade": "alta",
+            "prazo": "2026-09-15"
+        },
+        {
+            "id": "t2",
+            "titulo": "Criar modelo do banco de dados",
+            "projeto": "Sistema Acadêmico",
+            "responsavel": "João Santos",
+            "status": "a-fazer",
+            "prioridade": "media",
+            "prazo": "2026-09-18"
+        },
+        {
+            "id": "t3",
+            "titulo": "Desenvolver página inicial",
+            "projeto": "Portal da Biblioteca",
+            "responsavel": "Carlos Oliveira",
+            "status": "em-andamento",
+            "prioridade": "alta",
+            "prazo": "2026-09-20"
+        },
+        {
+            "id": "t4",
+            "titulo": "Implementar cadastro de alunos",
+            "projeto": "Sistema Acadêmico",
+            "responsavel": "Maria Souza",
+            "status": "em-andamento",
+            "prioridade": "media",
+            "prazo": "2026-09-22"
+        },
+        {
+            "id": "t5",
+            "titulo": "Revisar documentação do projeto",
+            "projeto": "Engenharia de Software",
+            "responsavel": "Lucas Pereira",
+            "status": "em-revisao",
+            "prioridade": "baixa",
+            "prazo": "2026-09-25"
+        },
+        {
+            "id": "t6",
+            "titulo": "Testar formulário de matrícula",
+            "projeto": "Sistema Acadêmico",
+            "responsavel": "Beatriz Lima",
+            "status": "em-revisao",
+            "prioridade": "alta",
+            "prazo": "2026-09-27"
+        },
+        {
+            "id": "t7",
+            "titulo": "Definir requisitos do projeto",
+            "projeto": "Aplicativo de Estudos",
+            "responsavel": "Pedro Costa",
+            "status": "concluida",
+            "prioridade": "media",
+            "prazo": "2026-09-05"
+        },
+        {
+            "id": "t8",
+            "titulo": "Entregar relatório da disciplina",
+            "projeto": "Projeto de Banco de Dados",
+            "responsavel": "Julia Martins",
+            "status": "concluida",
+            "prioridade": "baixa",
+            "prazo": "2026-09-08"
+        }
+    ]
+}
