@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,40 +19,72 @@
         <p id="status" role="status" aria-live="polite"></p>
 
         <section class="filtros" aria-labelledby="titulo-busca">
+
             <h2 id="titulo-busca">Busca e filtros</h2>
 
             <form>
 
                 <div class="campo-busca">
                     <label for="busca">Buscar tarefa por título:</label>
-                    <input type="search" id="busca" name="busca">
+                    <input
+                        type="search"
+                        id="busca"
+                        name="busca"
+                        placeholder="Digite o título da tarefa"
+                    >
                 </div>
 
                 <fieldset>
                     <legend>Filtrar por status</legend>
 
                     <div>
-                        <input type="radio" id="status-todos" name="status" value="todos" checked>
+                        <input
+                            type="radio"
+                            id="status-todos"
+                            name="status"
+                            value="todos"
+                            checked
+                        >
                         <label for="status-todos">Todos</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="status-fazer" name="status" value="a-fazer">
+                        <input
+                            type="radio"
+                            id="status-fazer"
+                            name="status"
+                            value="a-fazer"
+                        >
                         <label for="status-fazer">A fazer</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="status-andamento" name="status" value="em-andamento">
+                        <input
+                            type="radio"
+                            id="status-andamento"
+                            name="status"
+                            value="em-andamento"
+                        >
                         <label for="status-andamento">Em andamento</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="status-revisao" name="status" value="em-revisao">
+                        <input
+                            type="radio"
+                            id="status-revisao"
+                            name="status"
+                            value="em-revisao"
+                        >
                         <label for="status-revisao">Em revisão</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="status-concluida" name="status" value="concluida">
+                        <input
+                            type="radio"
+                            id="status-concluida"
+                            name="status"
+                            value="concluida"
+                        >
                         <label for="status-concluida">Concluída</label>
                     </div>
 
@@ -63,67 +94,124 @@
                     <legend>Filtrar por prioridade</legend>
 
                     <div>
-                        <input type="radio" id="prioridade-todas" name="prioridade" value="todas" checked>
+                        <input
+                            type="radio"
+                            id="prioridade-todas"
+                            name="prioridade"
+                            value="todas"
+                            checked
+                        >
                         <label for="prioridade-todas">Todas</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="prioridade-baixa" name="prioridade" value="baixa">
+                        <input
+                            type="radio"
+                            id="prioridade-baixa"
+                            name="prioridade"
+                            value="baixa"
+                        >
                         <label for="prioridade-baixa">Baixa</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="prioridade-media" name="prioridade" value="media">
+                        <input
+                            type="radio"
+                            id="prioridade-media"
+                            name="prioridade"
+                            value="media"
+                        >
                         <label for="prioridade-media">Média</label>
                     </div>
 
                     <div>
-                        <input type="radio" id="prioridade-alta" name="prioridade" value="alta">
+                        <input
+                            type="radio"
+                            id="prioridade-alta"
+                            name="prioridade"
+                            value="alta"
+                        >
                         <label for="prioridade-alta">Alta</label>
                     </div>
 
                 </fieldset>
 
+                <div class="campo-ordenacao">
+
+                    <label for="ordenacao">Ordenar por prazo:</label>
+
+                    <select id="ordenacao" name="ordenacao">
+                        <option value="nenhuma">Sem ordenação</option>
+                        <option value="prazo-crescente">Prazo mais próximo</option>
+                        <option value="prazo-decrescente">Prazo mais distante</option>
+                    </select>
+
+                </div>
+
+                <div class="campo-limpar">
+
+                    <button
+                        type="button"
+                        id="limpar-filtros"
+                    >
+                        Limpar filtros
+                    </button>
+
+                </div>
+
             </form>
+
         </section>
 
-        <section class="quadro" aria-labelledby="titulo-quadro" data-quadro>
+        <section
+            class="quadro"
+            aria-labelledby="titulo-quadro"
+            data-quadro
+        >
 
             <h2 id="titulo-quadro">Quadro de tarefas</h2>
 
-            <section class="coluna coluna-a-fazer" aria-labelledby="titulo-a-fazer">
+            <section
+                class="coluna coluna-a-fazer"
+                aria-labelledby="titulo-a-fazer"
+            >
 
                 <h2 id="titulo-a-fazer">A fazer</h2>
 
-                <ul data-lista-status="a-fazer">
-                </ul>
+                <ul data-lista-status="a-fazer"></ul>
 
             </section>
 
-            <section class="coluna coluna-andamento" aria-labelledby="titulo-andamento">
+            <section
+                class="coluna coluna-andamento"
+                aria-labelledby="titulo-andamento"
+            >
 
                 <h2 id="titulo-andamento">Em andamento</h2>
 
-                <ul data-lista-status="em-andamento">
-                </ul>
+                <ul data-lista-status="em-andamento"></ul>
 
             </section>
 
-            <section class="coluna coluna-revisao" aria-labelledby="titulo-revisao">
+            <section
+                class="coluna coluna-revisao"
+                aria-labelledby="titulo-revisao"
+            >
 
                 <h2 id="titulo-revisao">Em revisão</h2>
 
-                <ul data-lista-status="em-revisao">
-                </ul>
+                <ul data-lista-status="em-revisao"></ul>
 
             </section>
 
-            <section class="coluna coluna-concluida" aria-labelledby="titulo-concluida">
+            <section
+                class="coluna coluna-concluida"
+                aria-labelledby="titulo-concluida"
+            >
 
                 <h2 id="titulo-concluida">Concluída</h2>
 
-                <ul data-lista-status="concluida">
-                </ul>
+                <ul data-lista-status="concluida"></ul>
 
             </section>
 
@@ -136,8 +224,10 @@
         <p>Disciplina: Desenvolvimento Front-End</p>
     </footer>
 
-    <script type="module" src="js/app.js"></script>
+    <script
+        type="module"
+        src="js/app.js"
+    ></script>
 
 </body>
-
 </html>
