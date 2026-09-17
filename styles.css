@@ -1,3 +1,108 @@
+:root {
+    --cor-fundo: #f4f6f8;
+    --cor-superficie: #ffffff;
+    --cor-texto: #222222;
+    --cor-secundaria: #666666;
+    --cor-principal: #2563eb;
+    --cor-borda: #d1d5db;
+    --cor-destaque: #e5edff;
+    --raio: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+header,
+main,
+footer {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+header {
+    padding: 2rem 0 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--cor-secundaria);
+}
+
+main {
+    padding-bottom: 2rem;
+}
+
+#status {
+    min-height: 1.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.filtros {
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.filtros h2 {
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+.campo-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo-busca input {
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    background: var(--cor-superficie);
+    color: var(--cor-texto);
+}
+
+fieldset {
+    margin: 0;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+fieldset div {
+    margin: 0.4rem 0;
+}
+
+fieldset label {
+    margin-left: 0.25rem;
+}
+
 .campo-ordenacao {
     display: flex;
     flex-direction: column;
@@ -22,18 +127,117 @@
 .campo-limpar button {
     width: 100%;
     min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--raio);
+    background: var(--cor-principal);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
 }
 
+.campo-limpar button:hover {
+    opacity: 0.9;
+}
+
+.quadro {
+    display: grid;
+    gap: 1rem;
+}
+
+.quadro > h2 {
+    grid-column: 1 / -1;
+}
+
+.coluna {
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 1rem;
+    min-width: 0;
+}
+
+.coluna h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.coluna ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.cartao {
+    background: var(--cor-destaque);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 1rem;
+}
+
+.cartao h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.cartao p {
+    margin: 0.35rem 0;
+}
+
+.cartao button {
+    margin-top: 0.75rem;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--cor-principal);
+    border-radius: var(--raio);
+    background: var(--cor-superficie);
+    color: var(--cor-principal);
+    cursor: pointer;
+}
+
+.cartao button:hover {
+    background: var(--cor-principal);
+    color: white;
+}
+
+footer {
+    padding: 1.5rem 0 2rem;
+    color: var(--cor-secundaria);
+    border-top: 1px solid var(--cor-borda);
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
 
 @media (min-width: 700px) {
+
+    form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campo-busca {
+        grid-column: 1 / -1;
+    }
 
     .campo-ordenacao,
     .campo-limpar {
         grid-column: span 1;
     }
 
+    .quadro {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
+@media (min-width: 1000px) {
+
+    .quadro {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 @media (max-width: 699px) {
 
@@ -41,4 +245,7 @@
         width: 100%;
     }
 
+    .quadro {
+        grid-template-columns: 1fr;
+    }
 }
