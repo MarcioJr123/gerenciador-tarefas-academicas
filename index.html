@@ -17,6 +17,30 @@
     <main>
 
         <p id="status" role="status" aria-live="polite"></p>
+        
+        <section class="progresso" aria-labelledby="titulo-progresso">
+
+            <div class="progresso-cabecalho">
+                <h2 id="titulo-progresso">Progresso das tarefas</h2>
+                <span id="percentual-progresso">0%</span>
+            </div>
+        
+            <div
+                class="barra-progresso"
+                role="progressbar"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                aria-label="Progresso das tarefas"
+            >
+                <div id="barra-progresso-preenchida"></div>
+            </div>
+        
+            <p id="texto-progresso">
+                0 de 0 tarefas concluídas.
+            </p>
+        
+        </section>
 
         <section class="filtros" aria-labelledby="titulo-busca">
 
