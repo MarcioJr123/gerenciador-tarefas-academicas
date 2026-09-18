@@ -8,6 +8,9 @@ export function criarCartao(tarefa) {
     cartao.dataset.tarefaId =
         tarefa.id;
 
+    cartao.dataset.prioridade =
+        tarefa.prioridade;
+
 
     const titulo =
         document.createElement("h3");
