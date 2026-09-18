@@ -1,12 +1,13 @@
 :root {
-    --cor-fundo: #f4f6f8;
+    --cor-fundo: #f5f3ff;
     --cor-superficie: #ffffff;
-    --cor-texto: #222222;
-    --cor-secundaria: #666666;
-    --cor-principal: #2563eb;
-    --cor-borda: #d1d5db;
-    --cor-destaque: #e5edff;
-    --raio: 0.5rem;
+    --cor-texto: #1f2933;
+    --cor-secundaria: #6b7280;
+    --cor-principal: #6d28d9;
+    --cor-principal-escura: #5b21b6;
+    --cor-borda: #e0d9f7;
+    --cor-destaque: #f3effe;
+    --raio: 0.6rem;
 }
 
 * {
@@ -15,7 +16,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.5;
@@ -29,7 +30,17 @@ footer {
 }
 
 header {
-    padding: 2rem 0 1rem;
+    padding: 2.5rem 0 1.5rem;
+    background: linear-gradient(135deg, var(--cor-principal), var(--cor-principal-escura));
+    color: white;
+    border-radius: 0 0 var(--raio) var(--raio);
+    margin-bottom: 1.5rem;
+}
+
+header h1,
+header p {
+    width: min(1200px, 92%);
+    margin: 0 auto;
 }
 
 header h1 {
@@ -37,7 +48,7 @@ header h1 {
 }
 
 header p {
-    color: var(--cor-secundaria);
+    color: #e9e3fb;
 }
 
 main {
@@ -48,6 +59,46 @@ main {
     min-height: 1.5rem;
     margin: 1rem 0;
     font-weight: bold;
+}
+
+.progresso {
+    background: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.progresso-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#percentual-progresso {
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.barra-progresso {
+    background: var(--cor-destaque);
+    border-radius: 999px;
+    height: 0.8rem;
+    margin: 0.75rem 0;
+    overflow: hidden;
+}
+
+#barra-progresso-preenchida {
+    background: var(--cor-principal);
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    transition: width 0.5s ease;
+}
+
+#texto-progresso {
+    color: var(--cor-secundaria);
+    margin: 0;
 }
 
 .filtros {
@@ -93,6 +144,7 @@ fieldset {
 legend {
     font-weight: bold;
     padding: 0 0.5rem;
+    color: var(--cor-principal-escura);
 }
 
 fieldset div {
@@ -134,10 +186,11 @@ fieldset label {
     color: white;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.2s ease;
 }
 
 .campo-limpar button:hover {
-    opacity: 0.9;
+    background: var(--cor-principal-escura);
 }
 
 .quadro {
@@ -152,9 +205,26 @@ fieldset label {
 .coluna {
     background: var(--cor-superficie);
     border: 1px solid var(--cor-borda);
+    border-top: 4px solid var(--cor-secundaria);
     border-radius: var(--raio);
     padding: 1rem;
     min-width: 0;
+}
+
+.coluna-a-fazer {
+    border-top-color: #f59e0b;
+}
+
+.coluna-andamento {
+    border-top-color: #3b82f6;
+}
+
+.coluna-revisao {
+    border-top-color: #a855f7;
+}
+
+.coluna-concluida {
+    border-top-color: #22c55e;
 }
 
 .coluna h2 {
@@ -175,15 +245,24 @@ fieldset label {
     border: 1px solid var(--cor-borda);
     border-radius: var(--raio);
     padding: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
 
 .cartao h3 {
     margin-top: 0;
     margin-bottom: 0.75rem;
+    color: var(--cor-principal-escura);
 }
 
 .cartao p {
     margin: 0.35rem 0;
+    color: var(--cor-secundaria);
+    font-size: 0.95rem;
 }
 
 .cartao button {
@@ -195,6 +274,7 @@ fieldset label {
     background: var(--cor-superficie);
     color: var(--cor-principal);
     cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .cartao button:hover {
